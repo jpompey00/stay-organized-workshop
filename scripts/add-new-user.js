@@ -57,8 +57,11 @@ function addUser(userToAdd){
 }
 
 
-function createUserJson(username,password){
+//add some algorithm to simulate a random password and a way to test that.
+function createUserJson(name,username,password){
     let userObject = {
-
+        "name" : name,
+        "username" : username,
+        "password" : password
     }
 }
