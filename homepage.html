@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Change Title for the website-->
+    <title>Bootstrap demo</title>
+    <!--Change Title for the website-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+    <!--Change The Body for the website-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="homepage.html">Welcome to the ToDo App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Todo.html">View All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="New Todo.html">New Todo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="todo_details.html">Details Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="view_todos.html">View Page</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Home</h1>
+                    <p>Manage your tasks efficiently and stay organized</p>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Add New ToDo</h2>
+                        <p>Create new tasks by selecting a user, category, urgency, and providing a description and deadline.</p>
+                        <a href="new_todo.html" class="button">Add New ToDo</a>
+                    </div>
+                    <div class="card">
+                        <h2>View ToDo Details</h2>
+                        <p>See detailed information about a specific ToDo task, including its description, deadline, and completion status.</p>
+                        <a href="todo_details.html" class="button">View ToDo Details</a>
+                    </div>
+                    <div class="card">
+                        <h2>View All ToDos</h2>
+                        <p>Browse through a comprehensive list of all ToDo tasks available in the system.</p>
+                        <a href="todos.html" class="button">View All ToDos</a>
+                    </div>
+                    <div class="card">
+                        <h2>View ToDos by User</h2>
+                        <p>Select a user to view all their associated ToDo tasks and manage them efficiently.</p>
+                        <a href="view_todos.html" class="button">View ToDos by User</a>
+                    </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+
+
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="scripts/site.js"></script>
+</body>
+</html
