@@ -49,9 +49,12 @@ function addUser(userToAdd){
         "application/json; charset=UTF-8"}
     })
     .then(response => 
-        {   console.log(response);
-          //  alert(response);
+        {   if(response.status == 403){
+            outputTextBox.innerHTML = "Username already in use"
+        } else {
             return response.json()
+        }
+
         }
     )
     .then(data => {
