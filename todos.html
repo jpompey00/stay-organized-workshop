@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <div class="container">
+        <h1>ToDo Tasks</h1>
+        <label for="userSelect">User:</label>
+    <select id="userSelect"></select>
+    <label for="prioritySelect">Priority:</label>
+    <select id="prioritySelect">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+        <table>
+          <tr>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Deadline</th>
+        <th>Priority</th>
+          </tr>
+          <tbody id="todoList"></tbody>
+          </table>
+        </div>
+        <script src="scripts/todos.js"></script>
+</body>
+</html>
