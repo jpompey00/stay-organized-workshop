@@ -45,14 +45,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li> -->
                     </ul>
-                    <!-- <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                 </div>
             </div>
         </nav>
@@ -63,13 +56,31 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Hello, World!</h1>
+                    <h1>Register User</h1>
                 </div>
             </div>
 
+            <!--All this needs to be prettied up to get a more consistent design-->
+            <!--Think about implementing this like a form?-->
             <div class="row">
                 <div class="col">
+                    <label for = "nameInputBox">Name: </label>
+                    <input id = "nameInputBox" type = "text">
+                    <br>
+                    <label for = "usernameInputBox">Username:</label>
+                    <input id = "usernameInputBox" type = "text">
+                    <br>
+                    <!--Fix these to be password fields-->
+                    <label for = "passwordInputBox">Password: </label>
+                    <input id = "passwordInputBox" type = "text" >
+                    <br>
+                    <label for = "confirmPasswordInputBox">Confirm Password: </label>
+                    <input id = "confirmPasswordInputBox" type = "text">
+                    <br>
+                    <input id = "submitButton" type = button value = "Submit">
+                    <br>
 
+                    <p id = "outputTextBox"></p>
                 </div>
             </div>
         </div>
@@ -91,6 +102,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="scripts/site.js"></script>
+    <script src="scripts/add-new-user.js"></script>
 </body>
 </html
