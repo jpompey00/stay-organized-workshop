@@ -42,6 +42,45 @@ function onsubmitButtonClick() {
 function addUser(userToAdd){
     console.log(userToAdd);
 
+        fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify(userToAdd),
+            headers: {"Content-type":
+            "application/json; charset=UTF-8"}
+        })
+        .then(response => 
+            {   if(response.status == 403){
+                outputTextBox.innerHTML = "Username already in use"
+                throw Error("Username already in use")
+            } else {
+                return response.json()
+            }
+    
+            }
+        ).catch((error) => {
+            console.log(error.name)
+            if(error != null){
+                
+            }
+        })
+        .then(data => { //need this to not run if duplicate value
+            console.log(data)
+            outputTextBox.innerHTML = `${usernameInputBox.value} Added`
+            nameInputBox.value = "";
+            usernameInputBox.value = "";
+            passwordInputBox.value = "";
+            confirmPasswordInputBox.value= "";
+           
+        }) 
+
+
+    
+    //.catch() //add code here for 403 Error I think 403 returns sucessfully.
+
+}
+
+
+function apiCall(userToAdd){
     fetch(API_URL, {
         method: "POST",
         body: JSON.stringify(userToAdd),
@@ -51,6 +90,7 @@ function addUser(userToAdd){
     .then(response => 
         {   if(response.status == 403){
             outputTextBox.innerHTML = "Username already in use"
+            throw new Error("Username already in use")
         } else {
             return response.json()
         }
@@ -59,13 +99,14 @@ function addUser(userToAdd){
     )
     .then(data => {
         console.log(data)
-
-        return false;
-    });
-    //.catch() //add code here for 403 Error I think 403 returns sucessfully.
-
+        outputTextBox.innerHTML = `${usernameInputBox.value} Added`
+        nameInputBox.value = "";
+        usernameInputBox.value = "";
+        passwordInputBox.value = "";
+        confirmPasswordInputBox.value= "";
+       
+    })
 }
-
 
 //add some algorithm to simulate a random password and a way to test that.
 function createUserJson(name,username,password){
