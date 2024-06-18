@@ -60,7 +60,7 @@ function addUser(userToAdd){
         ).catch((error) => {
             console.log(error.name)
             if(error != null){
-                
+                return 
             }
         })
         .then(data => { //need this to not run if duplicate value
